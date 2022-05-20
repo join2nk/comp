@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div id="heading">
+
+            <template>
+                <div>
+                   <h1>     
+                       hello ${data}
+                   </h1> 
+                   <button onclick="myfunc()">press</button>
+              
+                </div>
+            </template>
+
+            <script>
+                let head = new Component('heading')
+                head.evaluate('This is Heading')
+                function myfunc(){
+                    head.el.innerHTML = ''
+                }
+            </script>
+        </div>
+    </body>
+</html>
